@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio al cliente</title>
+    <link rel="shortcut icon" href="Img/LogoPng.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/ServicioCliente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="btnAtras">
+        <div class="circle">
+            <button class="circle2" id="btnBack" onclick="Back()"></button>
+        </div>
+    </div>
+    <section>
+        <div class="contenedor">
+            <h2>Contáctenos</h2>
+            <form action="mailto:rijobraynell@gmail.com" method="post" >
+            <div class="nose">
+                <div class="contenido">
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span class="texto">Primer nombre</span>
+                        <span class="linea"></span>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span class="texto">Apellido</span>
+                        <span class="linea"></span>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="inputbox">
+                        <input type="email" name="" required="required">
+                        <span class="texto">Correo electronico</span>
+                        <span class="linea"></span>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="inputbox">
+                        <input type="number" name="" required="required">
+                        <span class="texto">Teléfono</span>
+                        <span class="linea"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nose">
+                <div class="contenido">
+                    <div class="inputbox textarea">
+                        <textarea required="required"></textarea>
+                        <span class="texto">Diganos su mensaje</span>
+                        <span class="linea"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nose">
+                <div class="contenido">
+                    <span class="animaBtn"></span>
+                    <span class="animaBtn"></span>
+                    <span class="animaBtn"></span>
+                    <span class="animaBtn"></span>
+                    <input type="submit" value="Enviar">
+                </div>
+            </div>
+        </form>
+        </div>
+</section>
+
+<script>
+    let btnBack = document.querySelector('#btnBack');
+    var Back = function(){
+        history.back();
+    }
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

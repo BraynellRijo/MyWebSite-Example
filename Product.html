@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title> 
+    <link rel="shortcut icon" href="Img/LogoPng.png" type="image/x-icon">
+    <link rel="stylesheet" href="Css/Product.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <!--Script iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/ea8db2e383.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header id="header">
+        
+        <a href="Index.html"><h2 class="Logo"><img src="Img/LogoMejorado.png" alt="">Heracles</h2></a>
+    <nav id="menuH">
+           
+            <a href="Index.html"class="mH">Inicio</a>
+            <a href="Product.html"class="mH">Productos</a>
+            <a href="ServicioCliente.html"class="mH">Servicio al cliente</a>
+            <a href="AboutUs.html" class="mH"class="mH">Acerca de nosotros</a>
+            <a href="Login.html" class="mH Login">Login</a>
+
+            
+
+    </nav>
+<div class="container-cart"></div>
+    <div class="addCart">
+        <!-- <h1>Tu carrito de compras</h1> -->
+        <div class="cart-Icon">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span class="count">0</span>
+        </div>
+    </div>
+</header>
+<div class="cart">
+    <h1>Carrito</h1>
+    <ul class="list-cart"></ul>
+        <div class="verificar">
+            <div class="total">0.00</div>
+            <div class="cerrar">Cerrar</div>
+        </div>
+    </div>
+
+<main>
+
+    <div class="contenedor-main">
+        <div id="busqueda-contenedor">
+            <input type="search" placeholder="Buscar..." id="search-input">
+            <button id="search">Buscar</button>
+        </div>
+    
+
+    <div id="btnCategory">
+        <button class="button-value active" id="Todos" onclick="filterProduct('Todos')">Todos</button>
+        <button class="button-value" id="T-Shirt" onclick="filterProduct('T-Shirt')">T-Shirt</button>
+        <button class="button-value" id="Top" onclick="filterProduct('Top')">Top</button>
+        <button class="button-value" id="Sudaderas" onclick="filterProduct('Sudaderas')">Sudaderas</button>
+        <button class="button-value" id="Leggins" onclick="filterProduct('Leggins')">Leggins</button>
+        <button class="button-value" id="Joggers" onclick="filterProduct('Joggers')">Joggers</button>
+        <button class="button-value" id="Shorts" onclick="filterProduct('Shorts')">Shorts</button>
+        <button class="button-value" id="Tenis" onclick="filterProduct('Tenis')">Tenis</button>
+        <button class="button-value" id="Gorras" onclick="filterProduct('Gorras')">Gorras</button>
+        <button class="button-value" id="Accesorios" onclick="filterProduct('Accesorios')">Accesorios</button>    
+        <button class="button-value" id="Equipamiento" onclick="filterProduct('Equipamiento')">Equipamiento</button>
+    </div>
+    
+
+
+    <div id="products"></div>
+</div>
+
+</main>
+
+
+<footer>
+    <div class="enlaces-footer">
+    <div class="container-footer">
+        
+            <h2 class="title-footer">Contactenos</h2>
+            <ul>
+                <li><a href="https://instagram.com/hera.cle.s?igshid=MzRlODBiNWFlZA==">Instagram<ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://www.tiktok.com/@he.racles?_t=8eLa6lXEYDO&_r=1">Tik Tok<ion-icon name="logo-tiktok"></ion-icon></a></li>
+            </ul>
+        </div>
+        <hr class="divide-line">
+        <div class="container-footer">
+            <h2 class="title-footer">Explora</h2>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="Product.html">Productos</a></li>
+                <li><a href="ServicioCliente.html">Servicio al cliente</a></li>
+                <li><a href="AboutUs.html">Acerca de nosotros</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="container-footer">
+            <h2 class="title-footer">Proximamente</h2>
+            <ul>
+                <li><a href="#">Nuevos productos</a></li>
+                <li><a href="#">Diseño e-commerce</a></li>
+                <li><a href="#">Sección de ofertas semanales</ion-icon></a></li>
+                <li><a href="#">Sistema de envios</a></li>
+                <li><a href="#">Sistema de facturacion electronica</a></li>
+                <li><a href="#">Inicio de sesion con otras plataformas</a></li>
+                <li><a href="#">Integración de API para guardar los resgistros</a></li>
+                <li><a href="#">Sistema de busqueada avanzado</a></li>
+                <li><a href="#">Modo de color(claro o oscuro)</a></li>
+                <li><a href="#">Solucion de errores y bugs</a></li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <div class="derechos">
+        <p> ©2023-2024 Heracles <small>Always Confortable</small> | Todos los derechos</p>
+    </div>
+</footer>
+
+
+<script src="Js/ScriptProduct.js"></script>
+<script>
+    // Obtener el valor del parámetro de la URL
+    var params = new URLSearchParams(window.location.search);
+    var valorParaDiv = params.get('active');
+
+    // Verificar si el valor existe y activar el div
+    if (valorParaDiv) {
+      var divActivado = document.getElementById('divParaActivar');
+      divActivado.innerText = valorParaDiv;
+    }
+  </script>
+  
+</body>
+</html>
